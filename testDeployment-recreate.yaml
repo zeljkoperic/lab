@@ -15,10 +15,8 @@ spec:
         app: http
     spec:
       containers:
-      - image: httpd:alpine3.19
+      - image: httpd:alpine3.18
         name: httpd
   strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 1
-      maxSurge: 1
+    type: Recreate
+
